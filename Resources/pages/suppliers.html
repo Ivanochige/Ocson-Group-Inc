@@ -1,0 +1,85 @@
+
+<div class="main-heading">
+    <span>Suppliers</span>
+</div>
+
+<div class="main-content">
+    <div class="mainheading">
+        <h2>Suppliers Management</h2>
+        <p>Manage suppliers and their contact information.</p>
+    </div>
+
+    <div class="inventory-tabs">
+        <button class="add-supplier-btn">Add Supplier</button>
+    </div>
+
+    <div class="search-group">
+        <select class="search-select" id="supplierSearchCriteria">
+            <option value="All">All</option>
+            <option value="Name">Supplier Name</option>
+            <option value="Company">Company</option>
+            <option value="Email">Email</option>
+            <option value="Phone">Phone</option>
+        </select>
+
+        <input type="text" id="supplierSearchInput" 
+               class="search-input" 
+               placeholder="Search suppliers...">
+
+        <button class="btn-outline" style="background-color: blue;"
+            onclick="searchSuppliers()">Search
+        </button>
+
+        <button class="btn-outline" style="background-color: crimson;"
+            onclick="clearSupplierSearch()">Clear
+        </button>
+    </div>
+
+    <hr>
+
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <div id="suppliersTableContainer">
+                        <!-- Suppliers table will be dynamically loaded here -->
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="suppliersPaginationContainer">
+                        <!-- Pagination controls will load here -->
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- SUPPLIER MODAL -->
+    <div class="userModule" id="user-Module">
+        <div class="model-content">
+            <span class="close" onclick="closeUserModule()">&times;</span>
+            <h3>Create New User</h3>
+
+            <form id="userform">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+
+                <select required>
+                    <option value="">Role</option>
+                    <option>Admin</option>
+                    <option>User</option>
+                </select>
+
+                <div class="modal-buttons">
+                    <button class="save-btn" type="submit">Save</button>
+                    <button class="save-btn" type="reset">Clear</button>
+                    <button class="cancel-btn" type="button" onclick="closeUserModule()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,93 @@
+
+<div class="main-heading">
+    <span>Inventory</span>
+</div>
+
+<div class="main-content">
+    <div class="mainheading">
+        <h2>Inventory Management</h2>
+        <p>Manage your inventory items and stock levels.</p>
+    </div>
+
+    <div class="inventory-tabs">
+        <button class="add-product" data-tab="items">Add Product</button>
+        <button class="add-product-type" data-tab="stock">Add Product Type</button>
+        <button class="add-product-category" data-tab="suppliers">Add Product Category</button>
+        <button class="add-subcategory" data-tab="subcategories">Add Subcategory</button>
+    </div>
+
+    <div class="search-group">
+        <select class="search-select" id="searchCriteria">
+            <option value="All">All</option>
+            <option value="Product Type">Product Type</option>
+            <option value="Product Category">Product Category</option>
+            <option value="Subcategory">Subcategory</option>
+            <option value="Product Name">Product Name</option>
+            <option value="Reorder Required">Reorder Required</option>
+        </select>
+        <input type="text" id="searchInput" class="search-input" placeholder="Search inventory...">
+        <button class="btn-outline" style="background-color: blue;" onclick="clearSearch()">Search</button>
+        <button class="btn-outline" style="background-color: crimson;" onclick="clearSearchInput()">Clear</button>
+    </div>
+
+    <hr>
+
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <div id="inventoryTableContainer">
+                        <!-- Inventory table will be dynamically loaded here -->
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="paginationContainer">
+                        <!-- Pagination controls will be dynamically loaded here -->
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Add Product -->
+    <div class="tab-panel active" id="items">
+        <h2>Add Product</h2>
+        <form id="productForm">
+            <input type="text" placeholder="Product Name" required>
+            <input type="number" placeholder="Price" required>
+            <input type="number" placeholder="Quantity" required>
+            <button type="submit">Save Product</button>
+        </form>
+    </div>
+
+    <!-- Add Product Type -->
+    <div class="tab-panel" id="stock">
+        <h2>Add Product Type</h2>
+        <form id="productTypeForm">
+            <input type="text" placeholder="Product Type Name" required>
+            <button type="submit">Save Type</button>
+        </form>
+    </div>
+
+    <!-- Add Product Category -->
+    <div class="tab-panel" id="categories">
+        <h2>Add Product Category</h2>
+        <form id="categoryForm">
+            <input type="text" placeholder="Category Name" required>
+            <button type="submit">Save Category</button>
+        </form>
+    </div>
+
+    <!-- Add Subcategory -->
+    <div class="tab-panel" id="subcategories">
+        <h2>Add Subcategory</h2>
+        <form id="subcategoryForm">
+            <input type="text" placeholder="Subcategory Name" required>
+            <button type="submit">Save Subcategory</button>
+        </form>
+    </div>
+</div>
+
+

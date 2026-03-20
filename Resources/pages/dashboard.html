@@ -1,0 +1,119 @@
+<div class="main-heading">
+    <span>
+      Dashboard
+    </span>
+</div>
+
+<!-- ======================= Cards ================== -->
+<div class="main-content">
+  <!-- Cards -->
+  <div class="cardBox">
+    <div class="card">
+      <div>
+        <div class="numbers">1,504</div>
+        <div class="cardName">Customers</div>
+      </div>
+      <div class="iconBx">
+        <i class="fa-solid fa-users"></i>
+      </div>
+    </div>
+
+    <div class="card">
+      <div>
+        <div class="numbers">80</div>
+        <div class="cardName">Daily Sales</div>
+      </div>
+      <div class="iconBx">
+        <i class="fa-solid fa-shopping-cart"></i>
+      </div>
+    </div>
+
+    <div class="card">
+      <div>
+        <div class="numbers">284</div>
+        <div class="cardName">Stock</div>
+      </div>
+      <div class="iconBx">
+        <i class="fa-solid fa-cubes"></i>
+      </div>
+    </div>
+
+    <div class="card">
+      <div>
+        <div class="numbers">Ugx<br>7,842,000</div>
+        <div class="cardName">Earning</div>
+      </div>
+      <div class="iconBx">
+        <i class="fa-solid fa-coins"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- Data Section -->
+  <div class="data-grid">
+    <!-- Recent Orders -->
+    <div class="panel">
+      <h3>Recent Orders</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Customer</th>
+            <th>Product</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>John Doe</td>
+            <td>Premium Plan</td>
+            <td><span class="status active">Active</span></td>
+          </tr>
+          <tr>
+            <td>Sarah Lee</td>
+            <td>Starter Plan</td>
+            <td><span class="status pending">Pending</span></td>
+          </tr>
+          <tr>
+            <td>Michael Kim</td>
+            <td>Enterprise</td>
+            <td><span class="status active">Active</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Activity -->
+    <div class="panel">
+      <h3>Recent Activity</h3>
+      <ul class="activity">
+        <li><strong>John</strong> placed a new order</li>
+        <li><strong>Sarah</strong> upgraded her plan</li>
+        <li><strong>Admin</strong> updated dashboard</li>
+        <li><strong>Michael</strong> left a comment</li>
+      </ul>
+    </div>
+  </div>
+  <!-- Charts Section -->
+  <div class="data-grid" style="margin-top: 20px;">
+    <div class="panel">
+      <h3>Traffic Overview</h3>
+      <canvas id="trafficChart" height="120"></canvas>
+    </div>
+    <div class="panel">
+      <h3>Sales Distribution</h3>
+      <canvas id="salesChart" height="120"></canvas>
+    </div>
+  </div>
+
+  <div class="data-grid" style="margin-top: 20px;">
+    <div class="panel">
+      <h3>Revenue Trend</h3>
+      <canvas id="revenueChart" height="120"></canvas>
+    </div>
+    <div class="panel">
+      <h3>User Growth</h3>
+      <canvas id="usersChart" height="120"></canvas>
+    </div>
+  </div>
+</div>
+ <!-- ======================= Data ================== -->

@@ -1,0 +1,43 @@
+
+<div class="main-heading">
+    <span>Users</span>
+</div>
+
+<div class="main-content">
+    <div class="mainheading">
+        <h2>User Management</h2>
+        <p>Manage System Users.</p>
+    </div>
+
+    <div class="inventory-tabs">
+        <button class="add-supplier-btn" onclick="createUser()">Create User</button>
+    </div>
+
+    <!-- USER MODAL -->
+    <div class="userModule" id="user-Module">
+        <div class="model-content">
+            <span class="close" onclick="closeUserModule()">&times;</span>
+            <h3>Create New User</h3>
+
+            <form id="userform">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+
+                <select required>
+                    <option value="">Select Role</option>
+                    <option>Admin</option>
+                    <option>User</option>
+                </select>
+
+                <div class="modal-buttons">
+                    <button class="save-btn" type="submit">Save</button>
+                    <button class="cancel-btn" type="button" onclick="closeUserModule()">Clear</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+

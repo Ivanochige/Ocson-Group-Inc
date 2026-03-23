@@ -1,24 +1,30 @@
 const mainBody = document.querySelector(".main-body");
 
+// Get current page from hash
 function getPageFromHash() {
     let hash = location.hash.replace("#", "");
     if (!hash) hash = "dashboard";
     return `${hash}.html`;
 }
 
-// Auto-highlight active sidebar link //
+// Highlight active sidebar link
 function setActiveLink(page) {
     document.querySelectorAll("a[data-page]").forEach(link => {
-        link.classList.toggle("active", link.dataset.page === page);
+        link.classList.toggle(
+            "active",
+            link.dataset.page === page
+        );
     });
 }
-// Auto-highlight active sidebar link //
 
+// Load page dynamically
 async function loadPage(page) {
     try {
         mainBody.style.opacity = "0";
 
-        const res = await fetch(`Resources/pages/${page}`);
+        // ✅ FIX: Always use relative path with ./
+        const res = await fetch(`./Resources/pages/${page}`);
+
         if (!res.ok) throw new Error("Page not found");
 
         const html = await res.text();
@@ -26,7 +32,6 @@ async function loadPage(page) {
 
         setActiveLink(page);
 
-        // ✅ reveal smoothly
         requestAnimationFrame(() => {
             mainBody.style.opacity = "1";
         });
@@ -34,11 +39,9 @@ async function loadPage(page) {
     } catch (err) {
         mainBody.innerHTML = "<h3>Failed to load content</h3>";
         mainBody.style.opacity = "1";
-        console.error(err);
+        console.error("Routing error:", err);
     }
 }
-
-
 
 // Handle sidebar clicks
 document.addEventListener("click", (e) => {
@@ -46,7 +49,10 @@ document.addEventListener("click", (e) => {
     if (!link) return;
 
     e.preventDefault();
-    location.hash = link.dataset.page.replace(".html", "");
+
+    // ✅ cleaner hash handling
+    const page = link.dataset.page.replace(".html", "");
+    location.hash = page;
 });
 
 // Handle back/forward

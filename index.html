@@ -1,20 +1,36 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Base path for GitHub Pages (UPDATE repo name if needed) -->
+    <base href="/Ocson-Group-Inc/">
+
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/65f090e124.js" crossorigin="anonymous"></script>
-    <script type="module" src="/Resources/js/app.js"></script>
-    <link rel="apple-touch-icon" sizes="180x180" href="/Resources/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/Resources/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/Resources/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/Resources/site.webmanifest">
-    <link rel="stylesheet" href="/Resources/css/main.css">
-    <link rel="stylesheet" href="/Resources/css/style.css">
-    <title>Ocson Inc</title>
+
+    <!-- Styles -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./Resources/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./Resources/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./Resources/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./Resources/site.webmanifest">
+
+    <link rel="stylesheet" href="./Resources/css/main.css">
+    <link rel="stylesheet" href="./Resources/css/style.css">
+
+    <!-- SEO -->
+    <title>Ocson Inc | ERP Dashboard</title>
+    <meta name="description" content="Ocson Inc ERP Dashboard - Manage business operations efficiently.">
+    <meta name="author" content="Ivan Ochige">
+
 </head>
 
 <body>
+
+    <!-- Custom Components -->
     <my-navbar></my-navbar>
     <my-sidebar></my-sidebar>
 
@@ -32,9 +48,13 @@
 
     <my-footer></my-footer>
 
-    <script type="module" src="/Resources/js/funcs.js"></script>
-    <script type="module" src="/Resources/js/router.js"></script>
-    <script type="module" src="/Resources/js/api.js"></script>
+    <!-- Scripts (load AFTER DOM for stability) -->
+    <script type="module" src="./Resources/js/app.js"></script>
+    <script type="module" src="./Resources/js/funcs.js"></script>
+    <script type="module" src="./Resources/js/router.js"></script>
+    <script type="module" src="./Resources/js/api.js"></script>
+
 </body>
 
 </html>
+```
